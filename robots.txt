@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://move-and-metal-site.pages.dev/sitemap.xml
