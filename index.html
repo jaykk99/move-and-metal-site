@@ -100,6 +100,19 @@ header{padding:22px 0;display:flex;justify-content:space-between;align-items:cen
 .contact p{color:var(--grey)}
 .hours{margin-top:24px;color:var(--grey);font-size:.95rem}
 footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--grey);font-size:.9rem}
+.footnav{margin-bottom:14px}
+.footnav a{color:var(--grey);text-decoration:none;font-size:.9rem;margin:0 10px}
+.footnav a:hover{color:var(--red)}
+/* Load-size guide */
+.sizes{padding:70px 0}
+.sizes h2{text-align:center;font-size:2.2rem;margin-bottom:12px}
+.size-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1000px;margin:0 auto}
+.size-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center}
+.size-card .truck{font-size:2.6rem;margin-bottom:10px;opacity:.9}
+.size-card h3{font-size:1.15rem;margin-bottom:6px}
+.size-card .fits{color:var(--red);font-weight:800;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+.size-card p{color:var(--grey);font-size:.9rem}
+.size-card .ex{margin-top:12px;font-size:.85rem;color:var(--grey);border-top:1px solid var(--border);padding-top:12px}
 /* FAQ */
 .faq{padding:70px 0;background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .faq h2{text-align:center;font-size:2.2rem;margin-bottom:12px}
@@ -332,6 +345,19 @@ body{padding-bottom:76px}
 </div>
 </div>
 </section>
+<section class="sizes">
+<div class="wrap">
+<h2>How big is your pile?</h2>
+<p class="sub">Match your junk to a truck size. When in doubt, text us a photo.</p>
+<div class="size-grid">
+<div class="size-card"><div class="truck">🪑</div><h3>Single item</h3><div class="fits">from $49</div><p>One bulky piece and you're done.</p><div class="ex">e.g. couch, mattress, fridge, treadmill</div></div>
+<div class="size-card"><div class="truck">🛋️</div><h3>A few items</h3><div class="fits">$89–$139</div><p>2–4 bulky pieces, one quick load.</p><div class="ex">e.g. couch + loveseat + mattress</div></div>
+<div class="size-card"><div class="truck">📦</div><h3>Quarter truck</h3><div class="fits">$119–$169</div><p>A small room, a shed, or a big curbside pile.</p><div class="ex">e.g. shed cleanout, 10–15 bags + furniture</div></div>
+<div class="size-card"><div class="truck">🚚</div><h3>Half truck</h3><div class="fits">$149</div><p>The classic garage or basement cleanout.</p><div class="ex">e.g. full garage, basement of boxes + old furniture</div></div>
+<div class="size-card"><div class="truck">🏠</div><h3>Full truck</h3><div class="fits">$249</div><p>Estate cleanouts and full renovations.</p><div class="ex">e.g. whole-house cleanout, full demo debris</div></div>
+</div>
+</div>
+</section>
 <section class="areas">
 <div class="wrap">
 <h2>Where we work</h2>
@@ -350,7 +376,9 @@ body{padding-bottom:76px}
 <p class="hours">Mon–Sat 8am–8pm · Sun by appointment</p>
 </div>
 </section>
-<footer>© 2026 Move &amp; Metal · Winnipeg, MB · 204-972-0325 · metalmoovers@hotmail.com</footer>
+<footer>
+<div class="footnav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="quote.html">Get a Quote</a></div>
+© 2026 Move &amp; Metal · Winnipeg, MB · 204-972-0325 · metalmoovers@hotmail.com</footer>
 <div class="mobile-bar" role="navigation" aria-label="Quick contact">
 <a class="mb-call" href="tel:+12049720325">Call now</a>
 <a class="mb-text" href="sms:+12049720325">Text us</a>
