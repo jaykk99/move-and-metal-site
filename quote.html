@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote — Move &amp; Metal Winnipeg</title>
+<meta name="description" content="Get a ballpark junk removal quote from Move & Metal in under a minute. Answer a few questions, get your price range, then call or text 204-972-0325 to book.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://jaykk99.github.io/move-and-metal-site/quote.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23e10600' text-anchor='middle'%3EM%26M%3C/text%3E%3C/svg%3E">
+<style>
+:root{--red:#e10600;--black:#0a0a0a;--dark:#141414;--panel:#1c1c1c;--white:#ffffff;--grey:#b0b0b0;--border:#2a2a2a}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+body{background:var(--black);color:var(--white);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header{padding:22px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.logo{font-size:26px;font-weight:900;letter-spacing:-.5px;color:#fff;text-decoration:none}
+.logo span{color:var(--red)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--grey);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover,nav a.active{color:var(--red)}
+.call-btn{background:var(--red);color:#fff;font-weight:700;padding:13px 28px;border-radius:10px;text-decoration:none;font-size:16px;transition:transform .15s}
+.call-btn:hover{transform:scale(1.04)}
+.page-hero{padding:60px 0 30px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#1e0a0a 0%,var(--black) 60%)}
+.page-hero h1{font-size:2.6rem;letter-spacing:-1px;margin-bottom:12px}
+.page-hero h1 em{color:var(--red);font-style:normal}
+.page-hero p{color:var(--grey);font-size:1.1rem;max-width:600px;margin:0 auto}
+/* stepper */
+.stepper{display:flex;justify-content:center;gap:8px;margin:34px 0}
+.stepper .dot{width:38px;height:38px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--grey);font-size:15px}
+.stepper .dot.done{background:var(--red);border-color:var(--red);color:#fff}
+.stepper .dot.now{border-color:var(--red);color:var(--red)}
+.qcard{max-width:680px;margin:0 auto 60px;background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:40px 36px;display:none}
+.qcard.show{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qcard h2{font-size:1.5rem;margin-bottom:6px}
+.qcard .qsub{color:var(--grey);margin-bottom:24px;font-size:.95rem}
+.opts{display:grid;gap:12px}
+.opt{display:flex;align-items:center;gap:14px;background:var(--black);border:2px solid var(--border);border-radius:12px;padding:16px 18px;cursor:pointer;font-size:1.02rem;transition:border-color .15s}
+.opt:hover{border-color:var(--red)}
+.opt.sel{border-color:var(--red);background:#1e0a0a}
+.opt .e{font-size:1.6rem}
+.opt small{display:block;color:var(--grey);font-size:.85rem}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.checks .opt{font-size:.95rem;padding:13px 14px}
+.qnav{display:flex;justify-content:space-between;margin-top:28px;gap:12px}
+.qbtn{background:var(--red);color:#fff;border:none;font-weight:700;padding:14px 30px;border-radius:10px;font-size:16px;cursor:pointer;font-family:inherit}
+.qbtn:hover{transform:scale(1.03)}
+.qbtn.back{background:transparent;border:2px solid var(--border);color:var(--white)}
+.qbtn:disabled{opacity:.4;cursor:default;transform:none}
+select,input[type=text]{width:100%;background:var(--black);border:1px solid var(--border);color:var(--white);border-radius:10px;padding:14px;font-size:16px;font-family:inherit;margin-bottom:14px}
+.result-range{font-size:2.6rem;font-weight:900;color:var(--red);text-align:center;margin:14px 0}
+.result-note{color:var(--grey);font-size:.95rem;text-align:center;margin-bottom:20px}
+.summary{background:var(--black);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:22px;font-size:.95rem;color:var(--grey);white-space:pre-line}
+.send-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.send-row a{text-align:center;font-weight:700;padding:15px 0;border-radius:10px;text-decoration:none;font-size:16px}
+.send-sms{background:var(--red);color:#fff}
+.send-call{background:transparent;border:2px solid var(--border);color:#fff}
+.fineprint{text-align:center;color:var(--grey);font-size:.82rem;margin-top:18px}
+footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--grey);font-size:.9rem}
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.97);border-top:1px solid var(--border);padding:10px 16px;gap:10px}
+.mobile-bar a{flex:1;text-align:center;font-weight:700;padding:13px 0;border-radius:10px;text-decoration:none;font-size:16px}
+.mobile-bar .mb-call{background:var(--red);color:#fff}
+.mobile-bar .mb-text{background:transparent;border:2px solid var(--border);color:#fff}
+@media(max-width:640px){
+nav a:not(.call-btn){display:none}
+.page-hero h1{font-size:2rem}
+.qcard{padding:28px 20px}
+.checks{grid-template-columns:1fr}
+.send-row{grid-template-columns:1fr}
+.mobile-bar{display:flex}
+body{padding-bottom:76px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="logo" href="index.html">MOVE <span>&amp;</span> METAL</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="quote.html" class="active">Get a Quote</a>
+<a class="call-btn" href="tel:+12049720325">Call 204-972-0325</a>
+</nav>
+</header>
+</div>
+
+<section class="page-hero">
+<div class="wrap">
+<h1>Get a quote in <em>under a minute</em></h1>
+<p>Answer 4 quick questions. Everything stays on your phone — nothing is sent or stored anywhere.</p>
+</div>
+</section>
+
+<div class="wrap">
+<div class="stepper" id="stepper" aria-hidden="true">
+<div class="dot now" data-s="1">1</div><div class="dot" data-s="2">2</div><div class="dot" data-s="3">3</div><div class="dot" data-s="4">4</div>
+</div>
+
+<!-- STEP 1: service -->
+<div class="qcard show" data-step="1">
+<h2>What do you need?</h2>
+<p class="qsub">Pick the closest match.</p>
+<div class="opts" id="svc-opts">
+<div class="opt" data-v="junk"><span class="e">🛋️</span><div>Junk haul-away<small>Furniture, mattresses, household junk, cleanouts</small></div></div>
+<div class="opt" data-v="scrap"><span class="e">🔩</span><div>Scrap metal pickup<small>Appliances, auto parts, wire — often FREE</small></div></div>
+<div class="opt" data-v="moving"><span class="e">📦</span><div>Moving help<small>Loading / unloading muscle, $60/hr per mover</small></div></div>
+<div class="opt" data-v="reno"><span class="e">🏗️</span><div>Renovation debris<small>Drywall, lumber, flooring, fixtures</small></div></div>
+<div class="opt" data-v="yard"><span class="e">🌿</span><div>Yard / garage cleanout<small>Sheds, brush, years of accumulated stuff</small></div></div>
+</div>
+<div class="qnav"><span></span><button class="qbtn" id="next1" disabled>Next →</button></div>
+</div>
+
+<!-- STEP 2: size -->
+<div class="qcard" data-step="2">
+<h2>How much stuff?</h2>
+<p class="qsub">Rough guess is fine — final price is confirmed on arrival.</p>
+<div class="opts" id="size-opts">
+<div class="opt" data-v="single"><span class="e">🪑</span><div>Single item<small>One couch, mattress, or appliance</small></div></div>
+<div class="opt" data-v="few"><span class="e">🛏️</span><div>A few items<small>2–4 bulky pieces</small></div></div>
+<div class="opt" data-v="quarter"><span class="e">📦</span><div>Quarter truck<small>A small room or shed</small></div></div>
+<div class="opt" data-v="half"><span class="e">🚚</span><div>Half truck<small>Garage or basement cleanout</small></div></div>
+<div class="opt" data-v="full"><span class="e">🏠</span><div>Full truck<small>Estate or full renovation cleanout</small></div></div>
+</div>
+<div class="qnav"><button class="qbtn back" data-back="1">← Back</button><button class="qbtn" id="next2" disabled>Next →</button></div>
+</div>
+
+<!-- STEP 3: details -->
+<div class="qcard" data-step="3">
+<h2>A few details</h2>
+<p class="qsub">Check anything that applies. Stairs and heavy items affect the price.</p>
+<div class="checks" id="detail-opts">
+<div class="opt" data-v="stairs"><span class="e">🪜</span><div>Stairs involved</div></div>
+<div class="opt" data-v="heavy"><span class="e">🎹</span><div>Extra-heavy items<small>Piano, safe, hot tub</small></div></div>
+<div class="opt" data-v="tight"><span class="e">🚪</span><div>Tight access<small>Narrow halls, no elevator</small></div></div>
+<div class="opt" data-v="same-day"><span class="e">⚡</span><div>Need it today<small>Same-day pickup</small></div></div>
+</div>
+<label for="q-area" style="display:block;font-weight:700;margin:22px 0 8px">Where in Winnipeg / area?</label>
+<input type="text" id="q-area" placeholder="e.g. Transcona, Steinbach…" maxlength="60" autocomplete="off">
+<div class="qnav"><button class="qbtn back" data-back="2">← Back</button><button class="qbtn" id="next3">See my price →</button></div>
+</div>
+
+<!-- STEP 4: result -->
+<div class="qcard" data-step="4">
+<h2>Your ballpark price</h2>
+<p class="qsub">Based on your answers. Final price confirmed on arrival.</p>
+<div class="result-range" id="r-range">$149</div>
+<div class="result-note" id="r-note"></div>
+<div class="summary" id="r-summary"></div>
+<div class="send-row">
+<a class="send-sms" id="r-sms" href="sms:+12049720325">📱 Text us this quote</a>
+<a class="send-call" href="tel:+12049720325">📞 Call instead</a>
+</div>
+<p class="fineprint">Tapping "Text us" opens <em>your</em> messaging app with the quote pre-written — you hit send. We never see anything until you do.</p>
+<div class="qnav"><button class="qbtn back" data-back="3">← Start over</button><span></span></div>
+</div>
+</div>
+
+<footer>© 2026 Move &amp; Metal · Winnipeg, MB · 204-972-0325 · metalmoovers@hotmail.com</footer>
+<div class="mobile-bar" role="navigation" aria-label="Quick contact">
+<a class="mb-call" href="tel:+12049720325">Call now</a>
+<a class="mb-text" href="sms:+12049720325">Text us</a>
+</div>
+
+<script>
+// Multi-step quote wizard — 100% front-end. No network requests, no storage.
+// "Text us this quote" builds an sms: link; the visitor's own phone app sends it.
+(function(){
+  'use strict';
+  var state = { service: null, size: null, details: [], area: '' };
+  var cards = document.querySelectorAll('.qcard');
+  var dots = document.querySelectorAll('.stepper .dot');
+
+  function show(n){
+    cards.forEach(function(c){ c.classList.toggle('show', c.dataset.step == String(n)); });
+    dots.forEach(function(d){
+      var s = +d.dataset.s;
+      d.classList.toggle('now', s === n);
+      d.classList.toggle('done', s < n);
+    });
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function singleSelect(containerId, nextBtnId, key){
+    var box = document.getElementById(containerId);
+    var opts = box.querySelectorAll('.opt');
+    opts.forEach(function(o){
+      o.addEventListener('click', function(){
+        opts.forEach(function(x){ x.classList.remove('sel'); });
+        o.classList.add('sel');
+        state[key] = o.dataset.v;
+        if(nextBtnId) document.getElementById(nextBtnId).disabled = false;
+      });
+    });
+  }
+  singleSelect('svc-opts', 'next1', 'service');
+  singleSelect('size-opts', 'next2', 'size');
+
+  document.getElementById('detail-opts').querySelectorAll('.opt').forEach(function(o){
+    o.addEventListener('click', function(){
+      o.classList.toggle('sel');
+      var v = o.dataset.v;
+      var i = state.details.indexOf(v);
+      if(i === -1) state.details.push(v); else state.details.splice(i, 1);
+    });
+  });
+
+  document.getElementById('next1').addEventListener('click', function(){ show(2); });
+  document.getElementById('next2').addEventListener('click', function(){ show(3); });
+  document.querySelectorAll('[data-back]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(b.dataset.back === '3'){ reset(); }
+      show(+b.dataset.back);
+    });
+  });
+
+  var SVC_LABEL = {junk:'Junk haul-away', scrap:'Scrap metal pickup', moving:'Moving help', reno:'Renovation debris', yard:'Yard / garage cleanout'};
+  var SIZE_LABEL = {single:'Single item', few:'A few items', quarter:'Quarter truck', half:'Half truck', full:'Full truck'};
+  var DETAIL_LABEL = {stairs:'Stairs involved', heavy:'Extra-heavy items', tight:'Tight access', 'same-day':'Needs same-day pickup'};
+
+  function compute(){
+    var lo, hi, notes = [];
+    if(state.service === 'scrap' && state.size === 'single'){
+      return {range: 'FREE*', notes: ['Scrap metal pickup is free for qualifying loads.']};
+    }
+    if(state.service === 'moving'){
+      lo = 120; hi = 120; // 2-hr minimum, 1 mover
+      notes.push('$60/hr per mover, 2-hour minimum.');
+      if(state.size === 'half' || state.size === 'full'){ lo = 240; hi = 480; notes.push('Bigger move: 2 movers typical.'); }
+    } else {
+      var base = {single:[49,79], few:[89,139], quarter:[119,169], half:[149,199], full:[249,329]};
+      lo = base[state.size][0]; hi = base[state.size][1];
+      if(state.details.indexOf('heavy') !== -1){ lo += 40; hi += 60; notes.push('Extra-heavy items add $40–$60.'); }
+      if(state.details.indexOf('stairs') !== -1){ lo += 15; hi += 30; notes.push('Stairs add $15–$30.'); }
+      if(state.service === 'reno'){ lo += 20; hi += 40; notes.push('Debris dump fees included in range.'); }
+    }
+    return {range: '$' + lo + '–$' + hi, notes: notes};
+  }
+
+  document.getElementById('next3').addEventListener('click', function(){
+    state.area = document.getElementById('q-area').value.trim();
+    var r = compute();
+    document.getElementById('r-range').textContent = r.range;
+    document.getElementById('r-note').textContent =
+      (r.notes.length ? r.notes.join(' ') + ' ' : '') + 'Final price confirmed on arrival.';
+    var lines = [
+      'Move & Metal quote request',
+      'Service: ' + (SVC_LABEL[state.service] || state.service),
+      'Size: ' + (SIZE_LABEL[state.size] || state.size),
+      'Details: ' + (state.details.length ? state.details.map(function(d){ return DETAIL_LABEL[d] || d; }).join(', ') : 'none'),
+      'Area: ' + (state.area || 'not given'),
+      'Ballpark: ' + r.range
+    ];
+    var summary = lines.join('\n');
+    document.getElementById('r-summary').textContent = summary;
+    document.getElementById('r-sms').href = 'sms:+12049720325?body=' + encodeURIComponent(
+      'Hi Move & Metal! Here\'s my quote request:\n' + summary + '\nWhen could you come?');
+    show(4);
+  });
+
+  function reset(){
+    state = { service: null, size: null, details: [], area: '' };
+    document.querySelectorAll('.opt.sel').forEach(function(o){ o.classList.remove('sel'); });
+    document.getElementById('q-area').value = '';
+    document.getElementById('next1').disabled = true;
+    document.getElementById('next2').disabled = true;
+  }
+})();
+</script>
+</body>
+</html>
