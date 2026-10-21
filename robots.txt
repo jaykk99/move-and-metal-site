@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://move-and-metal-site.pages.dev/sitemap.xml
+
+Sitemap: https://jaykk99.github.io/move-and-metal-site/sitemap.xml
