@@ -407,7 +407,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
     var lo = BASE[load][0], hi = BASE[load][1];
     var mats = Array.prototype.map.call(
       document.querySelectorAll('.est-mat:checked'), function(c){ return c.value; });
-    var stairs = Math.max(0, parseInt(document.getElementById('est-stairs').value || '0', 10));
+    var stairs = Math.min(5, Math.max(0, parseInt(document.getElementById('est-stairs').value || '0', 10) || 0));
     var notes = [];
     if(mats.indexOf('metal') !== -1 && mats.length === 1){
       lo = 0; hi = 0;

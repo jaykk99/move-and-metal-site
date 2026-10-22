@@ -24,11 +24,9 @@ nav a:hover,nav a.active{color:#fff;background:var(--panel)}
 .hero h1 em{color:var(--red);font-style:normal}
 .hero p{color:var(--grey);font-size:1.15rem;max-width:640px;margin:0 auto}
 .reviews{padding:56px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.review{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:30px}
-.review .stars{color:var(--red);font-size:1.2rem;letter-spacing:3px;margin-bottom:12px}
-.review p{color:var(--grey);margin-bottom:14px}
-.review .who{font-weight:700}
-.review .who small{color:var(--grey);font-weight:400}
+.no-reviews{background:var(--panel);border:1px dashed var(--border);border-radius:16px;padding:48px 36px;text-align:center}
+.no-reviews h2{font-size:1.5rem;margin-bottom:10px}
+.no-reviews p{color:var(--grey);max-width:520px;margin:0 auto}
 .leave{padding:20px 0 70px}
 .form-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:36px;max-width:720px;margin:0 auto}
 .form-card h2{font-size:1.8rem;margin-bottom:8px}
@@ -84,40 +82,14 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color
 <section class="hero">
 <div class="wrap">
 <h1>What Winnipeg says. <em>Straight talk.</em></h1>
-<p>Real words from real hauls. Had us out? Leave yours below. It takes 30 seconds.</p>
+<p>Be the first to put words on this wall. Had us out? Leave yours below. It takes 30 seconds.</p>
 </div>
 </section>
 <div class="wrap">
 <section class="reviews">
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Texted a photo of the old couch at noon. Gone by four. Price was exactly what they quoted."</p>
-<div class="who">Dana K. <small>· St. Vital</small></div>
-</div>
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"They cleared my garage in one trip. Two guys, no mess left behind, fair price."</p>
-<div class="who">Marcus T. <small>· Transcona</small></div>
-</div>
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Scrap pickup from the shop, on time, every week. Easy to deal with."</p>
-<div class="who">Rob L. <small>· St. James</small></div>
-</div>
-<div class="review">
-<div class="stars">★★★★☆</div>
-<p>"Good price for a full load. Took a day longer than I wanted but they communicated the whole time."</p>
-<div class="who">Priya S. <small>· Fort Rouge</small></div>
-</div>
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Renovation debris gone same day. Did not have to lift a finger."</p>
-<div class="who">Gord H. <small>· Charleswood</small></div>
-</div>
-<div class="review">
-<div class="stars">★★★★★</div>
-<p>"Fast text quote, showed up when they said, price matched. Would call again."</p>
-<div class="who">Alina R. <small>· East Kildonan</small></div>
+<div class="no-reviews">
+<h2>No reviews posted yet</h2>
+<p>We are new enough that this wall is still blank. Had us out for a haul? Send yours in below and you will be the first name on it.</p>
 </div>
 </section>
 <section class="leave">
