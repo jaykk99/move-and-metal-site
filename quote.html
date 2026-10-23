@@ -6,11 +6,11 @@
 <title>Get a Quote | Move &amp; Metal Winnipeg</title>
 <meta name="description" content="Get a ballpark junk removal quote from Move & Metal in under a minute. Answer a few questions, get your price range, then call or text 204-972-0325 to book.">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="canonical" href="https://jaykk99.github.io/move-and-metal-site/quote.html">
+<link rel="canonical" href="https://move-and-metal-site.pages.dev/quote.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Get a Quote | Move &amp; Metal Winnipeg">
 <meta property="og:description" content="Get a ballpark junk removal quote from Move & Metal in under a minute. Answer a few questions, get your price range, then call or text 204-972-0325 to book.">
-<meta property="og:url" content="https://jaykk99.github.io/move-and-metal-site/quote.html">
+<meta property="og:url" content="https://move-and-metal-site.pages.dev/quote.html">
 <meta property="og:site_name" content="Move &amp; Metal">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Get a Quote | Move &amp; Metal Winnipeg">
@@ -18,7 +18,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Move & Metal",
 "description":"Junk removal, scrap metal pickup, and moving help in Winnipeg, MB.",
-"url":"https://jaykk99.github.io/move-and-metal-site/quote.html",
+"url":"https://move-and-metal-site.pages.dev/quote.html",
 "telephone":"+1-204-972-0325","email":"metalmoovers@hotmail.com",
 "address":{"@type":"PostalAddress","addressLocality":"Winnipeg","addressRegion":"MB","addressCountry":"CA"},
 "priceRange":"$49-$249"}
@@ -26,7 +26,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0a0a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23e10600' text-anchor='middle'%3EM%26M%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","name":"Get a Quote | Move & Metal Winnipeg",
-"url":"https://jaykk99.github.io/move-and-metal-site/quote.html",
+"url":"https://move-and-metal-site.pages.dev/quote.html",
 "description":"Front-end quote wizard for Move & Metal junk removal, scrap pickup, and moving help. No data sent or stored."}
 </script>
 <style>
@@ -91,7 +91,7 @@ select,input[type=text]{width:100%;background:var(--black);border:1px solid var(
 .photo-tips h3{color:var(--red);margin-bottom:10px}
 .photo-tips ul{list-style:none;color:var(--grey);font-size:.92rem}
 .photo-tips li{padding:6px 0;display:flex;gap:10px}
-.photo-tips .check{color:var(--red);font-weight:900}
+.photo-tips .check{display:inline-block;width:10px;height:2px;background:var(--red);vertical-align:middle;margin-right:8px}
 footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color:var(--grey);font-size:.9rem}
 .mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(10,10,10,.97);border-top:1px solid var(--border);padding:10px 16px;gap:10px}
 .mobile-bar a{flex:1;text-align:center;font-weight:700;padding:13px 0;border-radius:10px;text-decoration:none;font-size:16px}
@@ -107,6 +107,7 @@ nav a:not(.call-btn){display:none}
 body{padding-bottom:76px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media(max-width:700px){header{flex-direction:column;align-items:flex-start;gap:12px}.logo{white-space:nowrap;font-size:22px}header nav{width:100%;overflow-x:auto;gap:18px!important;padding-bottom:6px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a{white-space:nowrap;flex:0 0 auto}}
 </style>
 </head>
 <body>
@@ -139,11 +140,11 @@ body{padding-bottom:76px}
 <h2>What do you need?</h2>
 <p class="qsub">Pick the closest match.</p>
 <div class="opts" id="svc-opts">
-<div class="opt" data-v="junk"><span class="e">🛋️</span><div>Junk haul-away<small>Furniture, mattresses, household junk, cleanouts</small></div></div>
-<div class="opt" data-v="scrap"><span class="e">🔩</span><div>Scrap metal pickup<small>Appliances, auto parts, wire (often FREE)</small></div></div>
-<div class="opt" data-v="moving"><span class="e">📦</span><div>Moving help<small>Loading / unloading muscle, $60/hr per mover</small></div></div>
-<div class="opt" data-v="reno"><span class="e">🏗️</span><div>Renovation debris<small>Drywall, lumber, flooring, fixtures</small></div></div>
-<div class="opt" data-v="yard"><span class="e">🌿</span><div>Yard / garage cleanout<small>Sheds, brush, years of accumulated stuff</small></div></div>
+<div class="opt" data-v="junk"><div>Junk haul-away<small>Furniture, mattresses, household junk, cleanouts</small></div></div>
+<div class="opt" data-v="scrap"><div>Scrap metal pickup<small>Appliances, auto parts, wire (often FREE)</small></div></div>
+<div class="opt" data-v="moving"><div>Moving help<small>Loading / unloading muscle, $60/hr per mover</small></div></div>
+<div class="opt" data-v="reno"><div>Renovation debris<small>Drywall, lumber, flooring, fixtures</small></div></div>
+<div class="opt" data-v="yard"><div>Yard / garage cleanout<small>Sheds, brush, years of accumulated stuff</small></div></div>
 </div>
 <div class="qnav"><span></span><button class="qbtn" id="next1" disabled>Next →</button></div>
 </div>
@@ -153,11 +154,11 @@ body{padding-bottom:76px}
 <h2>How much stuff?</h2>
 <p class="qsub">Rough guess is fine, final price is confirmed on arrival.</p>
 <div class="opts" id="size-opts">
-<div class="opt" data-v="single"><span class="e">🪑</span><div>Single item<small>One couch, mattress, or appliance</small></div></div>
-<div class="opt" data-v="few"><span class="e">🛏️</span><div>A few items<small>2–4 bulky pieces</small></div></div>
-<div class="opt" data-v="quarter"><span class="e">📦</span><div>Quarter truck<small>A small room or shed</small></div></div>
-<div class="opt" data-v="half"><span class="e">🚚</span><div>Half truck<small>Garage or basement cleanout</small></div></div>
-<div class="opt" data-v="full"><span class="e">🏠</span><div>Full truck<small>Estate or full renovation cleanout</small></div></div>
+<div class="opt" data-v="single"><div>Single item<small>One couch, mattress, or appliance</small></div></div>
+<div class="opt" data-v="few"><div>A few items<small>2–4 bulky pieces</small></div></div>
+<div class="opt" data-v="quarter"><div>Quarter truck<small>A small room or shed</small></div></div>
+<div class="opt" data-v="half"><div>Half truck<small>Garage or basement cleanout</small></div></div>
+<div class="opt" data-v="full"><div>Full truck<small>Estate or full renovation cleanout</small></div></div>
 </div>
 <div class="qnav"><button class="qbtn back" data-back="1">← Back</button><button class="qbtn" id="next2" disabled>Next →</button></div>
 </div>
@@ -167,10 +168,10 @@ body{padding-bottom:76px}
 <h2>A few details</h2>
 <p class="qsub">Check anything that applies. Stairs and heavy items affect the price.</p>
 <div class="checks" id="detail-opts">
-<div class="opt" data-v="stairs"><span class="e">🪜</span><div>Stairs involved</div></div>
-<div class="opt" data-v="heavy"><span class="e">🎹</span><div>Extra-heavy items<small>Piano, safe, hot tub</small></div></div>
-<div class="opt" data-v="tight"><span class="e">🚪</span><div>Tight access<small>Narrow halls, no elevator</small></div></div>
-<div class="opt" data-v="same-day"><span class="e">⚡</span><div>Need it today<small>Same-day pickup</small></div></div>
+<div class="opt" data-v="stairs"><div>Stairs involved</div></div>
+<div class="opt" data-v="heavy"><div>Extra-heavy items<small>Piano, safe, hot tub</small></div></div>
+<div class="opt" data-v="tight"><div>Tight access<small>Narrow halls, no elevator</small></div></div>
+<div class="opt" data-v="same-day"><div>Need it today<small>Same-day pickup</small></div></div>
 </div>
 <label for="q-area" style="display:block;font-weight:700;margin:22px 0 8px">Where in Winnipeg / area?</label>
 <input type="text" id="q-area" placeholder="e.g. Transcona, Steinbach…" maxlength="60" autocomplete="off">
@@ -185,8 +186,8 @@ body{padding-bottom:76px}
 <div class="result-note" id="r-note"></div>
 <div class="summary" id="r-summary"></div>
 <div class="send-row">
-<a class="send-sms" id="r-sms" href="sms:+12049720325">📱 Text us this quote</a>
-<a class="send-call" href="tel:+12049720325">📞 Call instead</a>
+<a class="send-sms" id="r-sms" href="sms:+12049720325">Text us this quote</a>
+<a class="send-call" href="tel:+12049720325">Call instead</a>
 </div>
 <p class="fineprint">Tapping "Text us" opens <em>your</em> messaging app with the quote pre-written, you hit send. We never see anything until you do.</p>
 <div class="qnav"><button class="qbtn back" data-back="3">← Start over</button><span></span></div>
@@ -202,12 +203,12 @@ body{padding-bottom:76px}
 <div class="next-step"><div class="n">3</div><div><h3>We haul, you relax</h3><p>We load everything, sweep up after, and you pay when the job's done. Cash, e-transfer, or card.</p></div></div>
 </div>
 <div class="photo-tips">
-<h3>📸 Photo tips for the fastest quote</h3>
+<h3>Photo tips for the fastest quote</h3>
 <ul>
-<li><span class="check">✓</span> Stand back, one wide shot of the whole pile beats five close-ups</li>
-<li><span class="check">✓</span> Include something for scale (a door, a car, a person)</li>
-<li><span class="check">✓</span> Show the path we'd carry it down (stairs, narrow halls)</li>
-<li><span class="check">✓</span> Mention anything staying put so we don't quote it</li>
+<li><span class="check" aria-hidden="true"></span>Stand back, one wide shot of the whole pile beats five close-ups</li>
+<li><span class="check" aria-hidden="true"></span>Include something for scale (a door, a car, a person)</li>
+<li><span class="check" aria-hidden="true"></span>Show the path we'd carry it down (stairs, narrow halls)</li>
+<li><span class="check" aria-hidden="true"></span>Mention anything staying put so we don't quote it</li>
 </ul>
 </div>
 </div>

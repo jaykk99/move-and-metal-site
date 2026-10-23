@@ -57,7 +57,7 @@ locs = [u.find('{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text
         for u in ET.parse('sitemap.xml').getroot()]
 for fn in pages:
     if fn == '404.html': continue
-    url = 'https://jaykk99.github.io/move-and-metal-site/' + (
+    url = 'https://move-and-metal-site.pages.dev/' + (
         '' if fn == 'index.html' else ('blog/' if fn == 'blog/index.html' else fn))
     if url not in locs: fail('%s: missing from sitemap' % fn)
 

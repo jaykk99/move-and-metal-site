@@ -6,11 +6,11 @@
 <title>Move &amp; Metal | Junk Removal, Scrap Pickup &amp; Moving Help in Winnipeg</title>
 <meta name="description" content="Move & Metal: junk haul-away, scrap metal pickup, and moving help in Winnipeg. Fast, straightforward, no sorting needed. Call or text 204-972-0325.">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="canonical" href="https://jaykk99.github.io/move-and-metal-site/">
+<link rel="canonical" href="https://move-and-metal-site.pages.dev/">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Move & Metal",
 "description":"Junk removal, scrap metal pickup, and moving help in Winnipeg, MB.",
-"url":"https://jaykk99.github.io/move-and-metal-site/",
+"url":"https://move-and-metal-site.pages.dev/",
 "telephone":"+1-204-972-0325","email":"metalmoovers@hotmail.com",
 "address":{"@type":"PostalAddress","addressLocality":"Winnipeg","addressRegion":"MB","addressCountry":"CA"},
 "openingHours":["Mo-Sa 08:00-20:00"],"priceRange":"$49-$249",
@@ -37,7 +37,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Move &amp; Metal | Junk Removal, Scrap Pickup &amp; Moving Help in Winnipeg">
 <meta property="og:description" content="Junk removal, scrap metal pickup, and moving help across Winnipeg. No sorting needed. Call or text 204-972-0325.">
-<meta property="og:url" content="https://jaykk99.github.io/move-and-metal-site/">
+<meta property="og:url" content="https://move-and-metal-site.pages.dev/">
 <meta property="og:site_name" content="Move &amp; Metal">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Move &amp; Metal | Junk Removal, Scrap Pickup &amp; Moving Help in Winnipeg">
@@ -63,7 +63,7 @@ header{padding:22px 0;display:flex;justify-content:space-between;align-items:cen
 .cta.ghost{background:transparent;border:2px solid var(--border);color:var(--white)}
 .badges{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:44px;color:var(--grey);font-size:.95rem}
 .badges span{display:flex;align-items:center;gap:8px}
-.badges .check{color:var(--red);font-weight:900}
+.badges .check{display:inline-block;width:10px;height:2px;background:var(--red);vertical-align:middle;margin-right:8px}
 .how{padding:70px 0;background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .how h2{text-align:center;font-size:2.2rem;margin-bottom:12px}
 .sub{text-align:center;color:var(--grey);margin-bottom:40px;font-size:1.1rem}
@@ -108,7 +108,7 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;color
 .sizes h2{text-align:center;font-size:2.2rem;margin-bottom:12px}
 .size-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1000px;margin:0 auto}
 .size-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center}
-.size-card .truck{font-size:2.6rem;margin-bottom:10px;opacity:.9}
+.size-card .load{height:10px;border-radius:6px;background:var(--border);overflow:hidden;margin:0 auto 16px;max-width:140px}.size-card .load span{display:block;height:100%;background:var(--red);border-radius:6px}
 .size-card h3{font-size:1.15rem;margin-bottom:6px}
 .size-card .fits{color:var(--red);font-weight:800;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
 .size-card p{color:var(--grey);font-size:.9rem}
@@ -172,6 +172,18 @@ body{padding-bottom:76px}
 @media(prefers-reduced-motion:reduce){
 *{transition:none!important}
 }
+.hero{position:relative;overflow:hidden;padding:120px 0 90px}
+.hero-photo{position:absolute;inset:0;background:url("https://images.pexels.com/photos/29584744/pexels-photo-29584744.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;z-index:0}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.70) 50%,rgba(10,10,10,.96) 100%)}
+.hero>.wrap{position:relative;z-index:1}
+.hero p{color:#e0e0e0}
+.card.has-photo{padding:0;overflow:hidden}
+.card.has-photo .card-img{width:100%;height:170px;object-fit:cover;display:block;border-bottom:1px solid var(--border)}
+.card.has-photo h3,.card.has-photo p{padding:0 24px}
+.card.has-photo h3{margin-top:20px}
+.card.has-photo p{padding-bottom:24px}
+.photo-credit{font-size:12px;opacity:.6;margin-top:6px}
+@media(max-width:700px){header{flex-direction:column;align-items:flex-start;gap:12px}.logo{white-space:nowrap;font-size:22px}header nav{width:100%;overflow-x:auto;gap:18px!important;padding-bottom:6px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a{white-space:nowrap;flex:0 0 auto}}
 </style>
 </head>
 <body>
@@ -190,7 +202,7 @@ body{padding-bottom:76px}
 </nav>
 </header>
 </div>
-<section class="hero">
+<section class="hero"><div class="hero-photo" aria-hidden="true"></div>
 <div class="wrap">
 <div class="tag">Winnipeg's Haul-Away Crew</div>
 <h1>Junk gone. Scrap picked up. <em>Done today.</em></h1>
@@ -200,10 +212,10 @@ body{padding-bottom:76px}
 <a class="cta ghost" href="#pricing">See Pricing</a>
 </div>
 <div class="badges">
-<span><span class="check">✓</span> Same-day pickup available</span>
-<span><span class="check">✓</span> No sorting needed</span>
-<span><span class="check">✓</span> Upfront pricing</span>
-<span><span class="check">✓</span> Winnipeg &amp; area</span>
+<span><span class="check" aria-hidden="true"></span>Same-day pickup available</span>
+<span><span class="check" aria-hidden="true"></span>No sorting needed</span>
+<span><span class="check" aria-hidden="true"></span>Upfront pricing</span>
+<span><span class="check" aria-hidden="true"></span>Winnipeg &amp; area</span>
 </div>
 </div>
 </section>
@@ -223,12 +235,12 @@ body{padding-bottom:76px}
 <h2>What we haul</h2>
 <p class="sub">If it's in the way, we'll take it.</p>
 <div class="grid">
-<div class="card"><div class="icon">🛋️</div><h3>Junk Haul-Away</h3><p>Furniture, mattresses, household junk, estate cleanouts, renovation debris. Full loads or single items.</p></div>
-<div class="card"><div class="icon">🔩</div><h3>Scrap Metal Pickup</h3><p>Appliances, auto parts, rotors, panels, wire, copper. Regular shop pickups available for businesses.</p></div>
-<div class="card"><div class="icon">📦</div><h3>Moving Help</h3><p>Loading, unloading, and hauling for your move. Extra muscle when you need it most.</p></div>
-<div class="card"><div class="icon">🏭</div><h3>Shop &amp; Business Cleanouts</h3><p>Auto shops, warehouses, auctions: recurring scrap and debris removal on your schedule.</p></div>
-<div class="card"><div class="icon">🌿</div><h3>Yard &amp; Garage Cleanouts</h3><p>Sheds, garages, yards full of stuff. We clear it out and sweep up after.</p></div>
-<div class="card"><div class="icon">🏗️</div><h3>Renovation Debris</h3><p>Drywall, lumber, flooring, fixtures. Contractors welcome, recurring pickups available.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/9714795/pexels-photo-9714795.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Pile of old furniture and chairs ready for haul-away" loading="lazy" decoding="async" width="700" height="467"><h3>Junk Haul-Away</h3><p>Furniture, mattresses, household junk, estate cleanouts, renovation debris. Full loads or single items.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/21470313/pexels-photo-21470313.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Pile of rusty scrap auto parts" loading="lazy" decoding="async" width="700" height="467"><h3>Scrap Metal Pickup</h3><p>Appliances, auto parts, rotors, panels, wire, copper. Regular shop pickups available for businesses.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/7464676/pexels-photo-7464676.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Two movers carrying a couch" loading="lazy" decoding="async" width="700" height="467"><h3>Moving Help</h3><p>Loading, unloading, and hauling for your move. Extra muscle when you need it most.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/24827749/pexels-photo-24827749.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Van loaded with boxes and bags from a cleanout" loading="lazy" decoding="async" width="700" height="467"><h3>Shop &amp; Business Cleanouts</h3><p>Auto shops, warehouses, auctions: recurring scrap and debris removal on your schedule.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/29348622/pexels-photo-29348622.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Outdoor junk pile with an old mattress" loading="lazy" decoding="async" width="700" height="467"><h3>Yard &amp; Garage Cleanouts</h3><p>Sheds, garages, yards full of stuff. We clear it out and sweep up after.</p></div>
+<div class="card has-photo"><img class="card-img" src="https://images.pexels.com/photos/15432186/pexels-photo-15432186.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Worker loading construction debris onto a truck" loading="lazy" decoding="async" width="700" height="467"><h3>Renovation Debris</h3><p>Drywall, lumber, flooring, fixtures. Contractors welcome, recurring pickups available.</p></div>
 </div>
 </div>
 </section>
@@ -294,12 +306,12 @@ body{padding-bottom:76px}
 <h2>Why Move &amp; Metal</h2>
 <p class="sub">The stuff that actually matters when someone's hauling your things.</p>
 <div class="review-grid">
-<div class="review"><div class="stars">⚡</div><h3 style="color:var(--red);margin-bottom:10px">Same-day pickup</h3><p>Call in the morning, it's gone by afternoon. Most Winnipeg pickups happen the same day you reach out.</p></div>
-<div class="review"><div class="stars">💲</div><h3 style="color:var(--red);margin-bottom:10px">Price locked on arrival</h3><p>We confirm the final price before touching anything. It doesn't change after the work starts.</p></div>
-<div class="review"><div class="stars">🧹</div><h3 style="color:var(--red);margin-bottom:10px">We sweep up</h3><p>Every job ends with a swept floor, garage, yard, or room. You get your space back, not a mess.</p></div>
-<div class="review"><div class="stars">♻️</div><h3 style="color:var(--red);margin-bottom:10px">Scrap sorted right</h3><p>Metal goes to the scrapyard, reusables get donated, trash goes to the transfer station. Less landfill.</p></div>
-<div class="review"><div class="stars">📍</div><h3 style="color:var(--red);margin-bottom:10px">Actually local</h3><p>Winnipeg crew, Winnipeg phone number. No call centers, no franchise scripts.</p></div>
-<div class="review"><div class="stars">🤝</div><h3 style="color:var(--red);margin-bottom:10px">Shops welcome</h3><p>Auto shops and contractors: recurring scrap and debris pickups on your schedule.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">Same-day pickup</h3><p>Call in the morning, it's gone by afternoon. Most Winnipeg pickups happen the same day you reach out.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">Price locked on arrival</h3><p>We confirm the final price before touching anything. It doesn't change after the work starts.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">We sweep up</h3><p>Every job ends with a swept floor, garage, yard, or room. You get your space back, not a mess.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">Scrap sorted right</h3><p>Metal goes to the scrapyard, reusables get donated, trash goes to the transfer station. Less landfill.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">Actually local</h3><p>Winnipeg crew, Winnipeg phone number. No call centers, no franchise scripts.</p></div>
+<div class="review"><h3 style="color:var(--red);margin-bottom:10px">Shops welcome</h3><p>Auto shops and contractors: recurring scrap and debris pickups on your schedule.</p></div>
 </div>
 </div>
 </section>
@@ -354,11 +366,11 @@ body{padding-bottom:76px}
 <h2>How big is your pile?</h2>
 <p class="sub">Match your junk to a truck size. When in doubt, text us a photo.</p>
 <div class="size-grid">
-<div class="size-card"><div class="truck">🪑</div><h3>Single item</h3><div class="fits">from $49</div><p>One bulky piece and you're done.</p><div class="ex">e.g. couch, mattress, fridge, treadmill</div></div>
-<div class="size-card"><div class="truck">🛋️</div><h3>A few items</h3><div class="fits">$89–$139</div><p>2–4 bulky pieces, one quick load.</p><div class="ex">e.g. couch + loveseat + mattress</div></div>
-<div class="size-card"><div class="truck">📦</div><h3>Quarter truck</h3><div class="fits">$119–$169</div><p>A small room, a shed, or a big curbside pile.</p><div class="ex">e.g. shed cleanout, 10–15 bags + furniture</div></div>
-<div class="size-card"><div class="truck">🚚</div><h3>Half truck</h3><div class="fits">$149</div><p>The classic garage or basement cleanout.</p><div class="ex">e.g. full garage, basement of boxes + old furniture</div></div>
-<div class="size-card"><div class="truck">🏠</div><h3>Full truck</h3><div class="fits">$249</div><p>Estate cleanouts and full renovations.</p><div class="ex">e.g. whole-house cleanout, full demo debris</div></div>
+<div class="size-card"><div class="load" aria-hidden="true"><span style="width:8%"></span></div><h3>Single item</h3><div class="fits">from $49</div><p>One bulky piece and you're done.</p><div class="ex">e.g. couch, mattress, fridge, treadmill</div></div>
+<div class="size-card"><div class="load" aria-hidden="true"><span style="width:18%"></span></div><h3>A few items</h3><div class="fits">$89–$139</div><p>2–4 bulky pieces, one quick load.</p><div class="ex">e.g. couch + loveseat + mattress</div></div>
+<div class="size-card"><div class="load" aria-hidden="true"><span style="width:25%"></span></div><h3>Quarter truck</h3><div class="fits">$119–$169</div><p>A small room, a shed, or a big curbside pile.</p><div class="ex">e.g. shed cleanout, 10–15 bags + furniture</div></div>
+<div class="size-card"><div class="load" aria-hidden="true"><span style="width:50%"></span></div><h3>Half truck</h3><div class="fits">$149</div><p>The classic garage or basement cleanout.</p><div class="ex">e.g. full garage, basement of boxes + old furniture</div></div>
+<div class="size-card"><div class="load" aria-hidden="true"><span style="width:100%"></span></div><h3>Full truck</h3><div class="fits">$249</div><p>Estate cleanouts and full renovations.</p><div class="ex">e.g. whole-house cleanout, full demo debris</div></div>
 </div>
 </div>
 </section>
@@ -382,7 +394,7 @@ body{padding-bottom:76px}
 </section>
 <footer>
 <div class="footnav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="quote.html">Get a Quote</a><a href="blog/index.html">Blog</a></div>
-© 2026 Move &amp; Metal · Winnipeg, MB · 204-972-0325 · metalmoovers@hotmail.com</footer>
+© 2026 Move &amp; Metal · Winnipeg, MB · 204-972-0325 · metalmoovers@hotmail.com<div class="photo-credit">Stock photos via Pexels</div></footer>
 <div class="mobile-bar" role="navigation" aria-label="Quick contact">
 <a class="mb-call" href="tel:+12049720325">Call now</a>
 <a class="mb-text" href="sms:+12049720325">Text us</a>

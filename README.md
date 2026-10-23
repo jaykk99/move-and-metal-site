@@ -5,8 +5,10 @@ moving-help business, Winnipeg MB). Red/black theme, no build step, no
 JavaScript frameworks — plain HTML/CSS/vanilla JS.
 
 Live:
-- **https://jaykk99.github.io/move-and-metal-site/** (GitHub Pages, auto-deploys on push to master)
-- https://move-and-metal-site.pages.dev (Cloudflare Pages mirror)
+- **https://move-and-metal-site.pages.dev** (Cloudflare Pages, main address; canonical URLs and sitemap point here)
+- https://jaykk99.github.io/move-and-metal-site/ (GitHub Pages mirror)
+
+Photos are free-licence stock from Pexels, linked from images.pexels.com. Swap in real job photos as they come in.
 
 ## Pages
 
