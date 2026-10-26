@@ -1,3 +1,5 @@
+Live: https://move-and-metal-site.pages.dev
+
 # Move & Metal — site
 
 Static business site for Move & Metal (Jay's junk removal / scrap pickup /
@@ -5,7 +7,7 @@ moving-help business, Winnipeg MB). Red/black theme, no build step, no
 JavaScript frameworks — plain HTML/CSS/vanilla JS.
 
 Live:
-- **https://move-and-metal-site.pages.dev** (Cloudflare Pages, main address; canonical URLs and sitemap point here)
+- https://move-and-metal-site.pages.dev (Cloudflare Pages, main address; canonical URLs and sitemap point here)
 - https://move-and-metal.onrender.com (Render mirror)
 - https://jaykk99.github.io/move-and-metal-site/ (GitHub Pages mirror)
 
